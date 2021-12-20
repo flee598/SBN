@@ -14,10 +14,10 @@
 #' \dontrun{
 #' g <- sbn_create(10, 0.7)
 #' g2 <- igraph::as.undirected(g)
-#' sbn_dwn_nwk(g2, mouth = 1)
+#' sbn_down_dir(g2, mouth = 1)
 #' }
 #' @export
-sbn_dwn_nwk <- function(g, mouth){
+sbn_down_dir <- function(g, mouth){
 
   g2 <- igraph::as.directed(igraph::as.undirected(g), mode = "mutual")
 

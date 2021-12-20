@@ -12,10 +12,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' sbn_upstream_vert(g, 5)
+#' sbn_get_upstream(g, 5)
 #' }
 #' @export
-sbn_downstream_vert <- function(g, vert){
+sbn_get_upstream <- function(g, vert){
   if (!igraph::is.directed(g)) stop("g must be a downstream directed graph")
   x <- suppressWarnings(unique(unlist(shortest_paths(g, from = 5, to = V(g),
                                                            mode = "in")[[1]])))

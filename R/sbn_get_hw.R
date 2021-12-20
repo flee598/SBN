@@ -8,10 +8,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' sbn_hw_nodes(g)
+#' sbn_get_hw(g)
 #' }
 #' @export
-sbn_hw_nodes <- function(g){
+sbn_get_hw <- function(g){
   if (!igraph::is.directed(g)) stop("g must be a downstream directed graph")
   which(igraph::degree(g, v = igraph::V(g), mode = "in") == 0)
 }

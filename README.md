@@ -6,7 +6,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of SBN is to …
+Warning, currently a WIP, will likely be code breaking changes
+occurring, until v 1.0.0!
+
+The goal of SBN is to … see the [help
+page](https://flee598.github.io/SBN/) for details.
 
 ## Installation
 
@@ -18,8 +22,6 @@ devtools::install_github("flee598/SBN")
 ```
 
 ## Example
-
-This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(SBN)

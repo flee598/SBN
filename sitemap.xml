@@ -25,16 +25,19 @@
     <loc>https://flee598.github.io/SBN/reference/sbn_create.html</loc>
   </url>
   <url>
-    <loc>https://flee598.github.io/SBN/reference/sbn_downstream_vert.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_down_dir.html</loc>
   </url>
   <url>
-    <loc>https://flee598.github.io/SBN/reference/sbn_dwn_nwk.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_downstream.html</loc>
+  </url>
+  <url>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_hw.html</loc>
   </url>
   <url>
     <loc>https://flee598.github.io/SBN/reference/sbn_get_outlet.html</loc>
   </url>
   <url>
-    <loc>https://flee598.github.io/SBN/reference/sbn_hw_nodes.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_upstream.html</loc>
   </url>
   <url>
     <loc>https://flee598.github.io/SBN/reference/sbn_strahler.html</loc>

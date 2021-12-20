@@ -47,4 +47,3 @@ We can quickly calculate the Strahler order of vertices in a network.
 
 ### A note on plotting SBNs
 For quick plotting I have generally used [ggraph](https://www.data-imaginist.com/2017/ggraph-introduction-layouts/) with the `tree` layout. As far as I can tell, the `tree` algorithm doesn't play nice with a downstream weighted network, and therefore for plotting purposes you need to reverse the network to an upstream weighted one and it works fine. It is a bit fiddly, but I haven't found any simple "out-of-the-box" alternative as of yet. Another option is to generate your own vertex coordinates (as OCNet does), but I haven't gotten around to implementing that.
-

@@ -15,7 +15,7 @@
 #' @export
 sbn_get_downstream <- function(g, vert){
   if (!igraph::is.directed(g)) stop("g must be a downstream directed graph")
-    x <- suppressWarnings(igraph::shortest_paths(g, from = vert, to = sbn::sbn_get_outlet(g),
+    x <- suppressWarnings(igraph::shortest_paths(g, from = vert, to = sbn_get_outlet(g),
                       mode = "out"))[[1]][[1]]
   return(setdiff(x, vert))
 }

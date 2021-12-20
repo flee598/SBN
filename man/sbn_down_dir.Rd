@@ -19,8 +19,6 @@ Convert a non-directed network to a downstream directed network.
 }
 \examples{
 \dontrun{
-g <- sbn_create(10, 0.7)
-g2 <- igraph::as.undirected(g)
-sbn_down_dir(g2, mouth = 1)
+sbn_down_dir(g, mouth = 1)
 }
 }

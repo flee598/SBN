@@ -1,20 +1,6 @@
 url: https://flee598.github.io/SBN/
 template:
   bootstrap: 5
-reference:
- - title: "SBN functions"
-   desc: >
-    Functions for generating and woking with SBNs
-   contents: 
-    - sbn_create
-    - sbn_change_dir
-    - sbn_down_dir
-    - sbn_to_adj
-    - sbn_get_downstream
-    - sbn_get_upstream
-    - sbn_get_outlet
-    - sbn_get_hw
-    - sbn_strahler
 
 
  

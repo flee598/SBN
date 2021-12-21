@@ -40,9 +40,9 @@ library(SBN)
 # generate an SBN with 10 nodes and a branching probability of 0.7
 g <- sbn_create(10, 0.7)
 g
-#> IGRAPH d598da1 D--- 10 9 -- 
-#> + edges from d598da1:
-#> [1]  2->1  3->1  4->2  5->3  6->5  7->6  8->6  9->7 10->7
+#> IGRAPH a3b4fb4 D--- 10 9 -- 
+#> + edges from a3b4fb4:
+#> [1]  2->1  3->1  4->2  5->2  6->3  7->3  8->4  9->5 10->5
 ```
 
 ![](man/figures/unnamed-chunk-5-1.png)<!-- -->
@@ -55,16 +55,16 @@ networks.
 ``` r
 # identify all headwater nodes
 sbn_get_hw(g)
-#>  4  8  9 10 
-#>  4  8  9 10
+#>  6  7  8  9 10 
+#>  6  7  8  9 10
 
 # get all nodes downstream of node 10
 sbn_get_downstream(g, 10)
-#> [1] 7 6 5 3 1
+#> [1] 5 2 1
 
 # get all nodes upstream of node 2
 sbn_get_upstream(g, 2)
-#> [1] 4
+#> [1]  4  5  8  9 10
 
 # get the id of the outlet node
 sbn_get_outlet(g)
@@ -74,23 +74,23 @@ sbn_get_outlet(g)
 # get the node-to-node distance of an undirected network
 sbn_to_mtx(g, method = "n2n_dist_undir")
 #>    1 2 3 4 5 6 7 8 9 10
-#> 1  0 1 1 2 2 3 4 4 5  5
-#> 2  1 0 2 1 3 4 5 5 6  6
-#> 3  1 2 0 3 1 2 3 3 4  4
-#> 4  2 1 3 0 4 5 6 6 7  7
-#> 5  2 3 1 4 0 1 2 2 3  3
-#> 6  3 4 2 5 1 0 1 1 2  2
-#> 7  4 5 3 6 2 1 0 2 1  1
-#> 8  4 5 3 6 2 1 2 0 3  3
-#> 9  5 6 4 7 3 2 1 3 0  2
-#> 10 5 6 4 7 3 2 1 3 2  0
+#> 1  0 1 1 2 2 2 2 3 3  3
+#> 2  1 0 2 1 1 3 3 2 2  2
+#> 3  1 2 0 3 3 1 1 4 4  4
+#> 4  2 1 3 0 2 4 4 1 3  3
+#> 5  2 1 3 2 0 4 4 3 1  1
+#> 6  2 3 1 4 4 0 2 5 5  5
+#> 7  2 3 1 4 4 2 0 5 5  5
+#> 8  3 2 4 1 3 5 5 0 4  4
+#> 9  3 2 4 3 1 5 5 4 0  2
+#> 10 3 2 4 3 1 5 5 4 2  0
 
 # downstream directed network to upstream directed network
 sbn_change_dir(g, method = "rev")
-#> IGRAPH d5fa875 DN-- 10 9 -- 
+#> IGRAPH a40c766 DN-- 10 9 -- 
 #> + attr: name (v/c)
-#> + edges from d5fa875 (vertex names):
-#> [1] 1->2  1->3  2->4  3->5  5->6  6->7  6->8  7->9  7->10
+#> + edges from a40c766 (vertex names):
+#> [1] 1->2  1->3  2->4  2->5  3->6  3->7  4->8  5->9  5->10
 ```
 
 ### Calculating Strahler order
@@ -101,7 +101,7 @@ Calculate the Strahler order of nodes in a network.
 # Strahler order
 sbn_strahler(g)
 #>  1  2  3  4  5  6  7  8  9 10 
-#>  2  1  2  1  2  2  2  1  1  1
+#>  3  2  2  1  2  1  1  1  1  1
 ```
 
 ### A note on plotting SBNs

@@ -2,21 +2,21 @@
 % Please edit documentation in R/sbn_get_hw.R
 \name{sbn_get_hw}
 \alias{sbn_get_hw}
-\title{get all headwater nodes}
+\title{Find all headwater nodes}
 \usage{
 sbn_get_hw(g)
 }
 \arguments{
-\item{g}{a dendritic network as an igraph object}
+\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
 }
 \value{
-a vector of headwater node id's
+A vector of headwater node id's.
 }
 \description{
-get all headwater nodes
+Find all headwater nodes in a network.
 }
 \examples{
-\dontrun{
+g <- sbn_create(10, 0.5)
 sbn_get_hw(g)
-}
+
 }

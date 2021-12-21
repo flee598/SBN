@@ -1,15 +1,17 @@
-#' get all headwater nodes
+#' Find all headwater nodes
 #'
-#' @param g a dendritic network as an igraph object
+#' Find all headwater nodes in a network.
 #'
-#' @return a vector of headwater node id's
+#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#'
+#' @return A vector of headwater node id's.
 #'
 #' @import igraph
 #'
 #' @examples
-#' \dontrun{
+#' g <- sbn_create(10, 0.5)
 #' sbn_get_hw(g)
-#' }
+#'
 #' @export
 sbn_get_hw <- function(g){
   if (!igraph::is.directed(g)) stop("g must be a downstream directed graph")

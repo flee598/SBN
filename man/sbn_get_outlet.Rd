@@ -2,21 +2,21 @@
 % Please edit documentation in R/sbn_get_outlet.R
 \name{sbn_get_outlet}
 \alias{sbn_get_outlet}
-\title{Find river mouth vertex}
+\title{Find river mouth node}
 \usage{
 sbn_get_outlet(g)
 }
 \arguments{
-\item{g}{a igraph directed graph representation of a river, e.g. an SBN or OCN.}
+\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
 }
 \value{
-an integer identifying the river mouth  vertex
+An integer identifying the id of river mouth node.
 }
 \description{
 Find river mouth node from a directed graph.
 }
 \examples{
-\dontrun{
+g <- sbn_create(10, 0.5)
 sbn_get_outlet(g)
-}
+
 }

@@ -1,18 +1,18 @@
-#' Find river mouth vertex
+#' Find river mouth node
 #'
 #' Find river mouth node from a directed graph.
 #'
-#' @param g a igraph directed graph representation of a river, e.g. an SBN or OCN.
+#' @param g A river network as an igraph object. Must be a downstream directed graph.
 #'
-#' @return an integer identifying the river mouth  vertex
+#' @return An integer identifying the id of river mouth node.
 #'
 #' @import igraph
 #'
 #'
 #' @examples
-#' \dontrun{
+#' g <- sbn_create(10, 0.5)
 #' sbn_get_outlet(g)
-#' }
+#'
 #' @export
 sbn_get_outlet <- function(g){
 

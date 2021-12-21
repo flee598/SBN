@@ -2,23 +2,23 @@
 % Please edit documentation in R/sbn_change_dir.R
 \name{sbn_change_dir}
 \alias{sbn_change_dir}
-\title{Convert direction of SBN}
+\title{Change the upstream/downstream direction of an SBN}
 \usage{
 sbn_change_dir(g, method = c("rev", "undir"))
 }
 \arguments{
-\item{g}{a river network as an igraph object}
+\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
 
 \item{method}{One of "rev" or "undir", determining what to convert the network to.}
 }
 \value{
-An igraph SBN
+A river network as an igraph object.
 }
 \description{
-Convert a downstream directed SBN to either, reversed or undirected.
+Change the upstream/downstream direction of an SBN to either, reversed or undirected.
 }
 \examples{
-\dontrun{
-sbn_direction(g, method = "up")
-}
+g <- sbn_create(10, 0.5)
+sbn_change_dir(g, method = "rev")
+
 }

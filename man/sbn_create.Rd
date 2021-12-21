@@ -7,15 +7,18 @@
 sbn_create(n, p)
 }
 \arguments{
-\item{n}{integer number of nodes.}
+\item{n}{Desired number of nodes.}
 
-\item{p}{branching probability, from 0 - 1}
+\item{p}{Branching probability, from 0 - 1. Passed to \code{stats::rbinom()}, the probability of success in two attempts at adding upstream branches.}
 }
 \value{
-An adjacency matrix
+A river network as an igraph object.
 }
 \description{
-Creates an SBN representation of a river
+An SBN river network as a downstream directed igraph object.
+}
+\details{
+SBNs are generated using a stochastic branching process. The network generation process starts from an initial downstream node (the river mouth). At each iteration a random node in the network, with no upstream connections is selected, and zero, one or two nodes are added upstream of it, depending on a branching probability (\emph{p}). This process is repeated until a pre-determined number of nodes across the entire network is attained (\emph{n}).
 }
 \examples{
 sbn_create(10, 0.5)

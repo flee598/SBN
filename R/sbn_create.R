@@ -1,12 +1,14 @@
 #' Create SBNs
 #'
-#' Creates an SBN representation of a river
+#' An SBN river network as a downstream directed igraph object.
 #'
-#' @param n integer number of nodes.
+#' SBNs are generated using a stochastic branching process. The network generation process starts from an initial downstream node (the river mouth). At each iteration a random node in the network, with no upstream connections is selected, and zero, one or two nodes are added upstream of it, depending on a branching probability (*p*). This process is repeated until a pre-determined number of nodes across the entire network is attained (*n*).
 #'
-#' @param p branching probability, from 0 - 1
+#' @param n Desired number of nodes.
 #'
-#' @return An adjacency matrix
+#' @param p Branching probability, from 0 - 1. Passed to `stats::rbinom()`, the probability of success in two attempts at adding upstream branches.
+#'
+#' @return A river network as an igraph object.
 #'
 #' @importFrom stats rbinom
 #' @importFrom igraph graph_from_adjacency_matrix
@@ -46,7 +48,6 @@ sbn_create <- function(n, p) {
     crnt <- unlist(adLst)
     crnt <- crnt[!is.na(crnt)]
 
-    # if no new nodes have been added sample all dead ends
     if (length(crnt) == 0 ) {
       crnt <- resample(as.numeric(names(ntw)[is.na(ntw)]), 1)
     }

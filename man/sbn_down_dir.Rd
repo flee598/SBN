@@ -7,18 +7,18 @@
 sbn_down_dir(g, mouth)
 }
 \arguments{
-\item{g}{a river network as an igraph object}
+\item{g}{A river network as an igraph object.}
 
-\item{mouth}{the rivermouth vertex}
+\item{mouth}{The river mouth vertex.}
 }
 \value{
-a downstream directed network.
+A downstream directed network.
 }
 \description{
-Convert a non-directed network to a downstream directed network.
+Convert an upstream directed or non-directed network to a downstream directed network.
 }
 \examples{
-\dontrun{
+g <- sbn_create(10, 0.5)
 sbn_down_dir(g, mouth = 1)
-}
+
 }

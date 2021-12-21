@@ -2,23 +2,23 @@
 % Please edit documentation in R/sbn_get_downstream.R
 \name{sbn_get_downstream}
 \alias{sbn_get_downstream}
-\title{find all vertices downstream of a given vertex}
+\title{Find all downstream nodes}
 \usage{
-sbn_get_downstream(g, vert)
+sbn_get_downstream(g, node)
 }
 \arguments{
-\item{g}{an SBN as an igraph object. Must be a downstream directed graph.}
+\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
 
-\item{vert}{target vertex to get all downstream nodes of}
+\item{node}{target node to get all downstream nodes of.}
 }
 \value{
-a vector of downstream vertex id's
+a vector of downstream node id's.
 }
 \description{
-find all vertices downstream of a given vertex
+Find all nodes downstream of a given node.
 }
 \examples{
-\dontrun{
-sbn_get_downstream(g, 5)
-}
+g <- sbn_create(10, 0.5)
+sbn_get_downstream(g, 10)
+
 }

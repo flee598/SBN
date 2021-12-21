@@ -18,7 +18,7 @@ A river network as an igraph object.
 Change the upstream/downstream direction of an SBN to either, reversed or undirected.
 }
 \examples{
-g <- sbn_create(10, 0.5)
+g <- sbn_create(10, 0.7)
 sbn_change_dir(g, method = "rev")
 
 }

@@ -11,7 +11,7 @@
 #' @importFrom igraph as.undirected is.directed
 #'
 #' @examples
-#' g <- sbn_create(10, 0.5)
+#' g <- sbn_create(10, 0.7)
 #' sbn_change_dir(g, method = "rev")
 #'
 #' @export

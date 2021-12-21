@@ -15,7 +15,7 @@
 #' @import igraph
 #'
 #' @examples
-#' g <- sbn_create(10, 0.5)
+#' g <- sbn_create(10, 0.7)
 #' sbn_to_mtx(g, method = "dwn_mtx")
 #'
 #' @export

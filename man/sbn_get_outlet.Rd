@@ -16,7 +16,7 @@ An integer identifying the id of river mouth node.
 Find river mouth node from a directed graph.
 }
 \examples{
-g <- sbn_create(10, 0.5)
+g <- sbn_create(10, 0.7)
 sbn_get_outlet(g)
 
 }

@@ -11,7 +11,7 @@
 #' @import igraph
 #'
 #' @examples
-#' g <- sbn_create(10, 0.5)
+#' g <- sbn_create(10, 0.7)
 #'
 #' # to undirected
 #' g <- sbn_change_dir(g, method = "undir")

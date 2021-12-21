@@ -21,6 +21,6 @@ An SBN river network as a downstream directed igraph object.
 SBNs are generated using a stochastic branching process. The network generation process starts from an initial downstream node (the river mouth). At each iteration a random node in the network, with no upstream connections is selected, and zero, one or two nodes are added upstream of it, depending on a branching probability (\emph{p}). This process is repeated until a pre-determined number of nodes across the entire network is attained (\emph{n}).
 }
 \examples{
-sbn_create(10, 0.5)
+sbn_create(10, 0.7)
 
 }

@@ -14,7 +14,7 @@
 #' @importFrom igraph graph_from_adjacency_matrix
 #'
 #' @examples
-#' sbn_create(10, 0.5)
+#' sbn_create(10, 0.7)
 #'
 #' @export
 sbn_create <- function(n, p) {

@@ -18,7 +18,7 @@ a vector of downstream node id's.
 Find all nodes downstream of a given node.
 }
 \examples{
-g <- sbn_create(10, 0.5)
+g <- sbn_create(10, 0.7)
 sbn_get_downstream(g, 10)
 
 }

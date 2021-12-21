@@ -18,7 +18,7 @@ A downstream directed network.
 Convert an upstream directed or non-directed network to a downstream directed network.
 }
 \examples{
-g <- sbn_create(10, 0.5)
+g <- sbn_create(10, 0.7)
 
 # to undirected
 g <- sbn_change_dir(g, method = "undir")

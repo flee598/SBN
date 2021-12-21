@@ -28,7 +28,7 @@ An adjacency or distance matrix.
 Convert a downstream directed SBN to various adjacency or distance matrix formats.
 }
 \examples{
-g <- sbn_create(10, 0.5)
+g <- sbn_create(10, 0.7)
 sbn_to_mtx(g, method = "dwn_mtx")
 
 }

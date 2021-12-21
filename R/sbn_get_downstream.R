@@ -11,7 +11,7 @@
 #' @importFrom igraph shortest_paths
 #'
 #' @examples
-#' g <- sbn_create(10, 0.5)
+#' g <- sbn_create(10, 0.7)
 #' sbn_get_downstream(g, 10)
 #'
 #' @export

@@ -89,6 +89,29 @@ g <- sbn_create(10, 0.7)
 g
 ```
 
+
+```{r, echo = FALSE, fig.dim = c(8, 5)}
+# plotting the above network
+library(igraph)    # for layout_as_tree
+library(ggraph)    # for ggplot2 style plotting
+
+# reverse to upstream diected graph - works
+g_rev <- sbn_change_dir(g, method = "rev")
+
+V(g)$name <- 1:gorder(g)
+
+# define layout
+l <- igraph::layout_as_tree(g_rev, flip.y = FALSE)
+
+ggraph(g_rev, l) +
+  geom_node_point(size = 5) +
+  geom_edge_link(arrow = arrow(length = unit(4, 'mm'), ends = "first"),
+                 end_cap = circle(4, 'mm'),
+                 start_cap = circle(4, 'mm')) +
+  geom_node_label(aes(label = name)) +
+  theme_void()
+```
+
 ### Basic manipulation
 The SBN package has a handful of functions for basic manipulation of networks.
 ```{r}

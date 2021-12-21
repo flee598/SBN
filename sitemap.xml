@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://flee598.github.io/SBN/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://flee598.github.io/SBN/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://flee598.github.io/SBN/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://flee598.github.io/SBN/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://flee598.github.io/SBN/index.html</loc>
   </url>
   <url>
-    <loc>/news/index.html</loc>
+    <loc>https://flee598.github.io/SBN/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_change_dir.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_change_dir.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_create.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_create.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_down_dir.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_down_dir.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_get_downstream.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_downstream.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_get_hw.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_hw.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_get_outlet.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_outlet.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_get_upstream.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_get_upstream.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_strahler.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_strahler.html</loc>
   </url>
   <url>
-    <loc>/reference/sbn_to_mtx.html</loc>
+    <loc>https://flee598.github.io/SBN/reference/sbn_to_mtx.html</loc>
   </url>
 </urlset>

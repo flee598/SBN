@@ -23,7 +23,7 @@ converted to `igraph` objects
 Aside from downstream directed networks upstream directed and undirected
 networks can be generated.
 
-![](man/figures/unnamed-chunk-2-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-2-1.png)<!-- -->
 
 ### Installation
 
@@ -40,12 +40,12 @@ library(SBN)
 # generate an SBN with 10 nodes and a branching probability of 0.7
 g <- sbn_create(10, 0.7)
 g
-#> IGRAPH a3b4fb4 D--- 10 9 -- 
-#> + edges from a3b4fb4:
-#> [1]  2->1  3->1  4->2  5->2  6->3  7->3  8->4  9->5 10->5
+#> IGRAPH 9b0416d D--- 10 9 -- 
+#> + edges from 9b0416d:
+#> [1]  2->1  3->1  4->2  5->3  6->3  7->4  8->5  9->6 10->7
 ```
 
-![](man/figures/unnamed-chunk-5-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 
 ### Basic manipulation
 
@@ -55,16 +55,16 @@ networks.
 ``` r
 # identify all headwater nodes
 sbn_get_hw(g)
-#>  6  7  8  9 10 
-#>  6  7  8  9 10
+#>  8  9 10 
+#>  8  9 10
 
 # get all nodes downstream of node 10
 sbn_get_downstream(g, 10)
-#> [1] 5 2 1
+#> [1] 7 4 2 1
 
 # get all nodes upstream of node 2
 sbn_get_upstream(g, 2)
-#> [1]  4  5  8  9 10
+#> [1]  4  7 10
 
 # get the id of the outlet node
 sbn_get_outlet(g)
@@ -74,23 +74,23 @@ sbn_get_outlet(g)
 # get the node-to-node distance of an undirected network
 sbn_to_mtx(g, method = "n2n_dist_undir")
 #>    1 2 3 4 5 6 7 8 9 10
-#> 1  0 1 1 2 2 2 2 3 3  3
-#> 2  1 0 2 1 1 3 3 2 2  2
-#> 3  1 2 0 3 3 1 1 4 4  4
-#> 4  2 1 3 0 2 4 4 1 3  3
-#> 5  2 1 3 2 0 4 4 3 1  1
-#> 6  2 3 1 4 4 0 2 5 5  5
-#> 7  2 3 1 4 4 2 0 5 5  5
-#> 8  3 2 4 1 3 5 5 0 4  4
-#> 9  3 2 4 3 1 5 5 4 0  2
-#> 10 3 2 4 3 1 5 5 4 2  0
+#> 1  0 1 1 2 2 2 3 3 3  4
+#> 2  1 0 2 1 3 3 2 4 4  3
+#> 3  1 2 0 3 1 1 4 2 2  5
+#> 4  2 1 3 0 4 4 1 5 5  2
+#> 5  2 3 1 4 0 2 5 1 3  6
+#> 6  2 3 1 4 2 0 5 3 1  6
+#> 7  3 2 4 1 5 5 0 6 6  1
+#> 8  3 4 2 5 1 3 6 0 4  7
+#> 9  3 4 2 5 3 1 6 4 0  7
+#> 10 4 3 5 2 6 6 1 7 7  0
 
 # downstream directed network to upstream directed network
 sbn_change_dir(g, method = "rev")
-#> IGRAPH a40c766 DN-- 10 9 -- 
+#> IGRAPH 9b63562 DN-- 10 9 -- 
 #> + attr: name (v/c)
-#> + edges from a40c766 (vertex names):
-#> [1] 1->2  1->3  2->4  2->5  3->6  3->7  4->8  5->9  5->10
+#> + edges from 9b63562 (vertex names):
+#> [1] 1->2  1->3  2->4  3->5  3->6  4->7  5->8  6->9  7->10
 ```
 
 ### Calculating Strahler order
@@ -101,7 +101,7 @@ Calculate the Strahler order of nodes in a network.
 # Strahler order
 sbn_strahler(g)
 #>  1  2  3  4  5  6  7  8  9 10 
-#>  3  2  2  1  2  1  1  1  1  1
+#>  2  1  2  1  1  1  1  1  1  1
 ```
 
 ### A note on plotting SBNs
@@ -134,7 +134,7 @@ ggraph(g) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-1.png)<!-- -->
+![](man/figures/README-unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 # Attempt 2 ------------------------------------------------
@@ -147,7 +147,7 @@ ggraph(g, layout = l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-2.png)<!-- -->
+![](man/figures/README-unnamed-chunk-8-2.png)<!-- -->
 
 ``` r
 # Attempt 3 ------------------------------------------------
@@ -164,7 +164,7 @@ ggraph(g_rev, layout = l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-3.png)<!-- -->
+![](man/figures/README-unnamed-chunk-8-3.png)<!-- -->
 
 ``` r
 # Attempt 4 ------------------------------------------------
@@ -177,4 +177,4 @@ ggraph(g_rev, l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-4.png)<!-- -->
+![](man/figures/README-unnamed-chunk-8-4.png)<!-- -->

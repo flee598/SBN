@@ -53,9 +53,9 @@
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>n</dt>
-<dd><p>Desired number of nodes.</p></dd>
+<dd><p>desired number of nodes.</p></dd>
 <dt>p</dt>
-<dd><p>Branching probability, from 0 - 1. Passed to <code><a href="https://rdrr.io/r/stats/Binomial.html" class="external-link">stats::rbinom()</a></code>, the probability of success in two attempts at adding upstream branches.</p></dd>
+<dd><p>branching probability, from 0 - 1. Passed to <code><a href="https://rdrr.io/r/stats/Binomial.html" class="external-link">stats::rbinom()</a></code>, the probability of success in two attempts at adding upstream branches.</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
@@ -69,9 +69,9 @@
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">sbn_create</span><span class="op">(</span><span class="fl">10</span>, <span class="fl">0.7</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH bf9d952 D--- 10 9 -- </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from bf9d952:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  2-&gt;1  3-&gt;1  4-&gt;2  5-&gt;3  6-&gt;4  7-&gt;6  8-&gt;7  9-&gt;8 10-&gt;9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH 4db58b2 D--- 10 9 -- </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from 4db58b2:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  2-&gt;1  3-&gt;1  4-&gt;2  5-&gt;2  6-&gt;3  7-&gt;3  8-&gt;4  9-&gt;4 10-&gt;5</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

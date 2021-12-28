@@ -59,13 +59,13 @@
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>g</dt>
-<dd><p>A river network as an igraph object. Must be a downstream directed graph.</p></dd>
+<dd><p>a river network as an igraph object. Must be a downstream directed graph.</p></dd>
 <dt>method</dt>
-<dd><p>One of "dwn_mtx", an adjacency matrix for a downstream directed SBN, "up_mtx", an adjacency matrix for a upstream directed SBN, "undir_mtx", an adjacency matrix for a  undirected SBN, "n2n_dist_up", "n2n_dist_dwn" or "n2n_dist_undir", an adjacency matrix of upstream, downstream or undirected node to node distances.</p></dd>
+<dd><p>one of "dwn_mtx", an adjacency matrix for a downstream directed SBN, "up_mtx", an adjacency matrix for a upstream directed SBN, "undir_mtx", an adjacency matrix for a  undirected SBN, "n2n_dist_up", "n2n_dist_dwn" or "n2n_dist_undir", an adjacency matrix of upstream, downstream or undirected node to node distances.</p></dd>
 <dt>unconnected</dt>
-<dd><p>When generating node-to-node distance matrices, what value should be used for unconnected elements. For example, in a downstream directed network, all upstream links are considered unconnected. Default value is <code>Inf</code> but other options are possible, such as <code>NA</code> or <code>0</code>.</p></dd>
+<dd><p>when generating node-to-node distance matrices, what value should be used for unconnected elements. For example, in a downstream directed network, all upstream links are considered unconnected. Default value is <code>Inf</code> but other options are possible, such as <code>NA</code> or <code>0</code>.</p></dd>
 <dt>weights</dt>
-<dd><p>Passed to <code><a href="https://rdrr.io/pkg/igraph/man/distances.html" class="external-link">igraph::shortest.paths()</a></code>. Possibly a numeric vector giving edge weights. If this is <code>NULL</code> and the graph has a weight edge attribute, then the attribute is used. If this is <code>NA</code> then no weights are used (even if the graph has a weight attribute).</p></dd>
+<dd><p>passed to <code><a href="https://rdrr.io/pkg/igraph/man/distances.html" class="external-link">igraph::shortest.paths()</a></code>. Possibly a numeric vector giving edge weights. If this is <code>NULL</code> and the graph has a weight edge attribute, then the attribute is used. If this is <code>NA</code> then no weights are used (even if the graph has a weight attribute).</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
@@ -79,14 +79,14 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span>       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,]    0    0    0    0    0    0    0    0    0     0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,]    1    0    0    0    0    0    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [3,]    0    1    0    0    0    0    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [4,]    0    0    1    0    0    0    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [5,]    0    0    0    1    0    0    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6,]    0    0    0    0    1    0    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [3,]    1    0    0    0    0    0    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [4,]    0    1    0    0    0    0    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [5,]    0    1    0    0    0    0    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [6,]    0    0    1    0    0    0    0    0    0     0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [7,]    0    0    0    0    1    0    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [8,]    0    0    0    0    0    1    0    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9,]    0    0    0    0    0    0    1    0    0     0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10,]    0    0    0    0    0    0    1    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [8,]    0    0    0    0    1    0    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [9,]    0    0    0    0    0    1    0    0    0     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [10,]    0    0    0    0    0    1    0    0    0     0</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

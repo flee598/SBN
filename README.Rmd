@@ -36,7 +36,7 @@ g <- sbn_create(10, 0.7)
 
 # Downstream directed graph --------------------------------------------------
 
-# reverse to upstream diected graph - works
+# reverse to upstream directed graph - works
 g_rev <- sbn_change_dir(g, method = "rev")
 
 # define layout

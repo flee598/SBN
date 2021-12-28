@@ -7,9 +7,9 @@
 sbn_create(n, p)
 }
 \arguments{
-\item{n}{Desired number of nodes.}
+\item{n}{desired number of nodes.}
 
-\item{p}{Branching probability, from 0 - 1. Passed to \code{stats::rbinom()}, the probability of success in two attempts at adding upstream branches.}
+\item{p}{branching probability, from 0 - 1. Passed to \code{\link[stats:Binomial]{stats::rbinom()}}, the probability of success in two attempts at adding upstream branches.}
 }
 \value{
 A river network as an igraph object.

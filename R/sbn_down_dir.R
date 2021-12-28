@@ -2,13 +2,13 @@
 #'
 #' Convert an upstream directed or non-directed network to a downstream directed network.
 #'
-#' @param g A river network as an igraph object.
+#' @param g a river network as an igraph object.
 #'
-#' @param mouth The river mouth vertex.
+#' @param mouth river mouth vertex id.
 #'
 #' @return A downstream directed network.
 #'
-#' @import igraph
+#' @importFrom igraph as.directed as.undirected V ends E as_ids shortest_paths graph_from_edgelist
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

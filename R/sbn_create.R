@@ -4,9 +4,9 @@
 #'
 #' SBNs are generated using a stochastic branching process. The network generation process starts from an initial downstream node (the river mouth). At each iteration a random node in the network, with no upstream connections is selected, and zero, one or two nodes are added upstream of it, depending on a branching probability (*p*). This process is repeated until a pre-determined number of nodes across the entire network is attained (*n*).
 #'
-#' @param n Desired number of nodes.
+#' @param n desired number of nodes.
 #'
-#' @param p Branching probability, from 0 - 1. Passed to `stats::rbinom()`, the probability of success in two attempts at adding upstream branches.
+#' @param p branching probability, from 0 - 1. Passed to [stats::rbinom()], the probability of success in two attempts at adding upstream branches.
 #'
 #' @return A river network as an igraph object.
 #'

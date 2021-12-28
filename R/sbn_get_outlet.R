@@ -2,12 +2,11 @@
 #'
 #' Find river mouth node from a directed graph.
 #'
-#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#' @param g a river network as an igraph object. Must be a downstream directed graph.
 #'
 #' @return An integer identifying the id of river mouth node.
 #'
-#' @import igraph
-#'
+#' @importFrom igraph is.directed V adjacent_vertices
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

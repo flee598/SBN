@@ -2,17 +2,17 @@
 #'
 #' Convert a downstream directed SBN to various adjacency or distance matrix formats.
 #'
-#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#' @param g a river network as an igraph object. Must be a downstream directed graph.
 #'
-#' @param method One of "dwn_mtx", an adjacency matrix for a downstream directed SBN, "up_mtx", an adjacency matrix for a upstream directed SBN, "undir_mtx", an adjacency matrix for a  undirected SBN, "n2n_dist_up", "n2n_dist_dwn" or "n2n_dist_undir", an adjacency matrix of upstream, downstream or undirected node to node distances.
+#' @param method one of "dwn_mtx", an adjacency matrix for a downstream directed SBN, "up_mtx", an adjacency matrix for a upstream directed SBN, "undir_mtx", an adjacency matrix for a  undirected SBN, "n2n_dist_up", "n2n_dist_dwn" or "n2n_dist_undir", an adjacency matrix of upstream, downstream or undirected node to node distances.
 #'
-#' @param unconnected When generating node-to-node distance matrices, what value should be used for unconnected elements. For example, in a downstream directed network, all upstream links are considered unconnected. Default value is `Inf` but other options are possible, such as `NA` or `0`.
+#' @param unconnected when generating node-to-node distance matrices, what value should be used for unconnected elements. For example, in a downstream directed network, all upstream links are considered unconnected. Default value is `Inf` but other options are possible, such as `NA` or `0`.
 #'
-#' @param weights Passed to `igraph::shortest.paths()`. Possibly a numeric vector giving edge weights. If this is `NULL` and the graph has a weight edge attribute, then the attribute is used. If this is `NA` then no weights are used (even if the graph has a weight attribute).
+#' @param weights passed to [igraph::shortest.paths()]. Possibly a numeric vector giving edge weights. If this is `NULL` and the graph has a weight edge attribute, then the attribute is used. If this is `NA` then no weights are used (even if the graph has a weight attribute).
 #'
 #' @return An adjacency or distance matrix.
 #'
-#' @import igraph
+#' @importFrom igraph as_adj is.directed as.undirected shortest.paths
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

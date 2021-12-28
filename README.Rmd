@@ -17,9 +17,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 <!-- badges: end -->
-
-Warning, currently a WIP, will likely be code breaking changes occurring, until v 1.0.0!
-
 The purpose of this package is to generate Stochastic Branching Networks (SBNs), which are frequently used to represent the branching structure of rivers in ecological models. The functions in this package rely heavily on the [igraph](https://igraph.org/r/) package. See the [help page](https://flee598.github.io/SBN/) for additional details.
 
 The fundamental unit of the SBN package is a downstream directed `igraph` object. The package contains functions for generating and manipulating these networks. The functions *should* also work on river networks generated in other packages, which have subsequently been converted to `igraph` objects (e.g. [OCNs](https://cran.r-project.org/web/packages/OCNet/vignettes/OCNet.html)).

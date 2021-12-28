@@ -2,11 +2,11 @@
 #'
 #' Find all headwater nodes in a network.
 #'
-#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#' @param g a river network as an igraph object. Must be a downstream directed graph.
 #'
 #' @return A vector of headwater node id's.
 #'
-#' @import igraph
+#' @importFrom igraph is.directed V degree
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

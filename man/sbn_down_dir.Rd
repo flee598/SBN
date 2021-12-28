@@ -7,9 +7,9 @@
 sbn_down_dir(g, mouth)
 }
 \arguments{
-\item{g}{A river network as an igraph object.}
+\item{g}{a river network as an igraph object.}
 
-\item{mouth}{The river mouth vertex.}
+\item{mouth}{river mouth vertex id.}
 }
 \value{
 A downstream directed network.

@@ -2,13 +2,13 @@
 #'
 #' Change the upstream/downstream direction of an SBN to either, reversed or undirected.
 #'
-#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#' @param g a river network as an igraph object. Must be a downstream directed graph.
 #'
-#' @param method One of "rev" or "undir", determining what to convert the network to.
+#' @param method one of "rev" or "undir", determining what to convert the network to.
 #'
 #' @return A river network as an igraph object.
 #'
-#' @importFrom igraph as.undirected is.directed
+#' @importFrom igraph as.undirected is.directed get.data.frame vertex_attr graph.data.frame
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

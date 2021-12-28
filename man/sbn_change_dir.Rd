@@ -7,9 +7,9 @@
 sbn_change_dir(g, method = c("rev", "undir"))
 }
 \arguments{
-\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
+\item{g}{a river network as an igraph object. Must be a downstream directed graph.}
 
-\item{method}{One of "rev" or "undir", determining what to convert the network to.}
+\item{method}{one of "rev" or "undir", determining what to convert the network to.}
 }
 \value{
 A river network as an igraph object.

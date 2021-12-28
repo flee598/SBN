@@ -2,13 +2,13 @@
 #'
 #' Find all nodes downstream of a given node.
 #'
-#' @param g A river network as an igraph object. Must be a downstream directed graph.
+#' @param g a river network as an igraph object. Must be a downstream directed graph.
 #'
 #' @param node target node to get all downstream nodes of.
 #'
 #' @return a vector of downstream node id's.
 #'
-#' @importFrom igraph shortest_paths
+#' @importFrom igraph shortest_paths is.directed
 #'
 #' @examples
 #' g <- sbn_create(10, 0.7)

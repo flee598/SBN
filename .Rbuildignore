@@ -1,8 +1,12 @@
-^SBN\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
-^LICENSE\.md$
 ^README\.Rmd$
 ^_pkgdown\.yml$
 ^docs$
-^pkgdown$
+index.html
+index.md
+index.Rmd
 ^\.github$
+^LICENSE\.md$
+^cran-comments\.md$
+^CRAN-RELEASE$

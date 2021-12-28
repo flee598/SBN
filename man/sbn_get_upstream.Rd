@@ -7,9 +7,9 @@
 sbn_get_upstream(g, node)
 }
 \arguments{
-\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
+\item{g}{a river network as an igraph object. Must be a downstream directed graph.}
 
-\item{node}{Target node to get all upstream nodes of.}
+\item{node}{target node to get all upstream nodes of.}
 }
 \value{
 A vector of upstream node id's.

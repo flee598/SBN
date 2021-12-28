@@ -7,7 +7,7 @@
 sbn_get_downstream(g, node)
 }
 \arguments{
-\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
+\item{g}{a river network as an igraph object. Must be a downstream directed graph.}
 
 \item{node}{target node to get all downstream nodes of.}
 }

@@ -7,7 +7,7 @@
 sbn_get_outlet(g)
 }
 \arguments{
-\item{g}{A river network as an igraph object. Must be a downstream directed graph.}
+\item{g}{a river network as an igraph object. Must be a downstream directed graph.}
 }
 \value{
 An integer identifying the id of river mouth node.

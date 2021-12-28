@@ -14,7 +14,7 @@ The fundamental unit of the SBN package is a downstream directed
 manipulating these networks. The functions *should* also work on river
 networks generated in other packages, which have subsequently been
 converted to `igraph` objects
-(e.g. [OCNs](https://cran.r-project.org/web/packages/OCNet/vignettes/OCNet.html)).
+(e.g. [OCNs](https://CRAN.R-project.org/package=OCNet)).
 
 Aside from downstream directed networks upstream directed and undirected
 networks can be generated.
@@ -36,9 +36,9 @@ library(SBN)
 # generate an SBN with 10 nodes and a branching probability of 0.7
 g <- sbn_create(10, 0.7)
 g
-#> IGRAPH 23bcc20 D--- 10 9 -- 
-#> + edges from 23bcc20:
-#> [1]  2->1  3->1  4->2  5->2  6->3  7->3  8->4  9->4 10->5
+#> IGRAPH bc182cd D--- 10 9 -- 
+#> + edges from bc182cd:
+#> [1]  2->1  3->1  4->2  5->2  6->3  7->4  8->4  9->5 10->6
 ```
 
 ![](man/figures/unnamed-chunk-5-1.png)<!-- -->
@@ -51,16 +51,16 @@ networks.
 ``` r
 # identify all headwater nodes
 sbn_get_hw(g)
-#>  6  7  8  9 10 
-#>  6  7  8  9 10
+#>  7  8  9 10 
+#>  7  8  9 10
 
 # get all nodes downstream of node 10
 sbn_get_downstream(g, 10)
-#> [1] 5 2 1
+#> [1] 6 3 1
 
 # get all nodes upstream of node 2
 sbn_get_upstream(g, 2)
-#> [1]  4  5  8  9 10
+#> [1] 4 5 7 8 9
 
 # get the id of the outlet node
 sbn_get_outlet(g)
@@ -70,23 +70,23 @@ sbn_get_outlet(g)
 # get the node-to-node distance of an undirected network
 sbn_to_mtx(g, method = "n2n_dist_undir")
 #>    1 2 3 4 5 6 7 8 9 10
-#> 1  0 1 1 2 2 2 2 3 3  3
-#> 2  1 0 2 1 1 3 3 2 2  2
-#> 3  1 2 0 3 3 1 1 4 4  4
-#> 4  2 1 3 0 2 4 4 1 1  3
-#> 5  2 1 3 2 0 4 4 3 3  1
-#> 6  2 3 1 4 4 0 2 5 5  5
-#> 7  2 3 1 4 4 2 0 5 5  5
-#> 8  3 2 4 1 3 5 5 0 2  4
-#> 9  3 2 4 1 3 5 5 2 0  4
-#> 10 3 2 4 3 1 5 5 4 4  0
+#> 1  0 1 1 2 2 2 3 3 3  3
+#> 2  1 0 2 1 1 3 2 2 2  4
+#> 3  1 2 0 3 3 1 4 4 4  2
+#> 4  2 1 3 0 2 4 1 1 3  5
+#> 5  2 1 3 2 0 4 3 3 1  5
+#> 6  2 3 1 4 4 0 5 5 5  1
+#> 7  3 2 4 1 3 5 0 2 4  6
+#> 8  3 2 4 1 3 5 2 0 4  6
+#> 9  3 2 4 3 1 5 4 4 0  6
+#> 10 3 4 2 5 5 1 6 6 6  0
 
 # downstream directed network to upstream directed network
 sbn_change_dir(g, method = "rev")
-#> IGRAPH 241cfb3 DN-- 10 9 -- 
+#> IGRAPH bc75cae DN-- 10 9 -- 
 #> + attr: name (v/c)
-#> + edges from 241cfb3 (vertex names):
-#> [1] 1->2  1->3  2->4  2->5  3->6  3->7  4->8  4->9  5->10
+#> + edges from bc75cae (vertex names):
+#> [1] 1->2  1->3  2->4  2->5  3->6  4->7  4->8  5->9  6->10
 ```
 
 ### Calculating Strahler order
@@ -97,7 +97,7 @@ Calculate the Strahler order of nodes in a network.
 # Strahler order
 sbn_strahler(g)
 #>  1  2  3  4  5  6  7  8  9 10 
-#>  3  2  2  2  1  1  1  1  1  1
+#>  2  2  1  2  1  1  1  1  1  1
 ```
 
 ### A note on plotting SBNs

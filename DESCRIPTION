@@ -1,15 +1,14 @@
 Package: SBN
-Title: Generate Stocastic Branching Networks
-Version: 0.0.0.9000
+Title: Generate Stochastic Branching Networks
+Version: 1.0.0
 Authors@R: 
-    person("Finnbar", "Lee", , "finnbar.lee@gmail.com", role = c("aut", "cre"))
-Description: Generate Stocastic Branching Networks (SBNs). Used for the modelling of river type systems.
+    person("Finnbar", "Lee", , "lee.finnbar@gmail.com", role = c("aut", "cre"))
+Description: Generate Stochastic Branching Networks (SBNs). Used for modelling the branching structure of rivers.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     igraph,
-    magrittr,
-    rlang
+	stats
 URL: https://flee598.github.io/SBN/

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# SBN
+# SBN <img src='man/figures/sbn_hex.svg' align="right" height="150" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->

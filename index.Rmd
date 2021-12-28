@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# SBN
+# SBN <img src='man/figures/sbn_hex.svg' align="right" height="150" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -185,7 +185,7 @@ ggraph(g_rev, layout = l) +
   theme_graph()
 
 # Attempt 4 ------------------------------------------------
-# add downstream arrows - doesn't really serve any purpose..
+# add downstream arrows ...
 ggraph(g_rev, l) +
   geom_node_point(size = 5) +
   geom_edge_link(arrow = arrow(length = unit(4, 'mm'), ends = "first"),

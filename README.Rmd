@@ -75,7 +75,12 @@ p1 + p2 + p3
 
 
 ### Installation
-SBN is currently only accessible via the GitHub repo.
+SBN is available on CRAN
+```{r, warning = FALSE, eval = FALSE}
+install.packages("SBN")
+```
+
+Or to install the latest development version
 ```{r, warning = FALSE, eval = FALSE}
 devtools::install_github("flee598/SBN")
 ```

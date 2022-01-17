@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-01-17T04:50Z
+last_built: 2022-01-17T04:52Z
 urls:
   reference: https://flee598.github.io/SBN/reference
   article: https://flee598.github.io/SBN/articles

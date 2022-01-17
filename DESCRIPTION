@@ -3,7 +3,7 @@ Title: Generate Stochastic Branching Networks
 Version: 1.0.0
 Authors@R: 
     person("Finnbar", "Lee", , "lee.finnbar@gmail.com", role = c("aut", "cre"))
-Description: Generate Stochastic Branching Networks (SBNs). Used for modelling the branching structure of rivers.
+Description: Generate Stochastic Branching Networks ('SBNs'). Used to model the branching structure of rivers.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

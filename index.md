@@ -23,7 +23,13 @@ networks can be generated.
 
 ### Installation
 
-SBN is currently only accessible via the GitHub repo.
+SBN is available on CRAN
+
+``` r
+install.packages("SBN")
+```
+
+Or to install the latest development version
 
 ``` r
 devtools::install_github("flee598/SBN")
@@ -36,12 +42,12 @@ library(SBN)
 # generate an SBN with 10 nodes and a branching probability of 0.7
 g <- sbn_create(10, 0.7)
 g
-#> IGRAPH bc182cd D--- 10 9 -- 
-#> + edges from bc182cd:
-#> [1]  2->1  3->1  4->2  5->2  6->3  7->4  8->4  9->5 10->6
+#> IGRAPH 2b684a0 D--- 10 9 -- 
+#> + edges from 2b684a0:
+#> [1]  2->1  3->1  4->2  5->3  6->3  7->4  8->4  9->5 10->5
 ```
 
-![](man/figures/unnamed-chunk-5-1.png)<!-- -->
+![](man/figures/unnamed-chunk-6-1.png)<!-- -->
 
 ### Basic manipulation
 
@@ -51,16 +57,16 @@ networks.
 ``` r
 # identify all headwater nodes
 sbn_get_hw(g)
-#>  7  8  9 10 
-#>  7  8  9 10
+#>  6  7  8  9 10 
+#>  6  7  8  9 10
 
 # get all nodes downstream of node 10
 sbn_get_downstream(g, 10)
-#> [1] 6 3 1
+#> [1] 5 3 1
 
 # get all nodes upstream of node 2
 sbn_get_upstream(g, 2)
-#> [1] 4 5 7 8 9
+#> [1] 4 7 8
 
 # get the id of the outlet node
 sbn_get_outlet(g)
@@ -71,22 +77,22 @@ sbn_get_outlet(g)
 sbn_to_mtx(g, method = "n2n_dist_undir")
 #>    1 2 3 4 5 6 7 8 9 10
 #> 1  0 1 1 2 2 2 3 3 3  3
-#> 2  1 0 2 1 1 3 2 2 2  4
-#> 3  1 2 0 3 3 1 4 4 4  2
-#> 4  2 1 3 0 2 4 1 1 3  5
-#> 5  2 1 3 2 0 4 3 3 1  5
-#> 6  2 3 1 4 4 0 5 5 5  1
-#> 7  3 2 4 1 3 5 0 2 4  6
-#> 8  3 2 4 1 3 5 2 0 4  6
-#> 9  3 2 4 3 1 5 4 4 0  6
-#> 10 3 4 2 5 5 1 6 6 6  0
+#> 2  1 0 2 1 3 3 2 2 4  4
+#> 3  1 2 0 3 1 1 4 4 2  2
+#> 4  2 1 3 0 4 4 1 1 5  5
+#> 5  2 3 1 4 0 2 5 5 1  1
+#> 6  2 3 1 4 2 0 5 5 3  3
+#> 7  3 2 4 1 5 5 0 2 6  6
+#> 8  3 2 4 1 5 5 2 0 6  6
+#> 9  3 4 2 5 1 3 6 6 0  2
+#> 10 3 4 2 5 1 3 6 6 2  0
 
 # downstream directed network to upstream directed network
 sbn_change_dir(g, method = "rev")
-#> IGRAPH bc75cae DN-- 10 9 -- 
+#> IGRAPH 2bcbc6b DN-- 10 9 -- 
 #> + attr: name (v/c)
-#> + edges from bc75cae (vertex names):
-#> [1] 1->2  1->3  2->4  2->5  3->6  4->7  4->8  5->9  6->10
+#> + edges from 2bcbc6b (vertex names):
+#> [1] 1->2  1->3  2->4  3->5  3->6  4->7  4->8  5->9  5->10
 ```
 
 ### Calculating Strahler order
@@ -97,7 +103,7 @@ Calculate the Strahler order of nodes in a network.
 # Strahler order
 sbn_strahler(g)
 #>  1  2  3  4  5  6  7  8  9 10 
-#>  2  2  1  2  1  1  1  1  1  1
+#>  3  2  2  2  2  1  1  1  1  1
 ```
 
 ### A note on plotting SBNs
@@ -130,7 +136,7 @@ ggraph(g) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-1.png)<!-- -->
+![](man/figures/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
 # Attempt 2 ------------------------------------------------
@@ -143,7 +149,7 @@ ggraph(g, layout = l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-2.png)<!-- -->
+![](man/figures/unnamed-chunk-9-2.png)<!-- -->
 
 ``` r
 # Attempt 3 ------------------------------------------------
@@ -160,7 +166,7 @@ ggraph(g_rev, layout = l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-3.png)<!-- -->
+![](man/figures/unnamed-chunk-9-3.png)<!-- -->
 
 ``` r
 # Attempt 4 ------------------------------------------------
@@ -173,4 +179,4 @@ ggraph(g_rev, l) +
   theme_graph()
 ```
 
-![](man/figures/unnamed-chunk-8-4.png)<!-- -->
+![](man/figures/unnamed-chunk-9-4.png)<!-- -->
